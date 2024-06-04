@@ -1,0 +1,112 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background-color: #FDD90B;
+    padding: 10px 0;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: black;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+    flex-shrink: 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.side-color {
+    background-color: #DA001E; /* Red background color */
+    height: 100%;
+}
+
+.contact-form-container {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #F9D0A3; /* Light orange background color */
+}
+
+.contact-form-container h1 {
+    margin-bottom: 20px;
+}
+
+.contact-form-container .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form-container .btn {
+    background-color: #DA001E;
+    border-color: #DA001E;
+}
+
+.contact-form-container .btn:hover {
+    background-color: #B80016;
+    border-color: #B80016;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.navbar .nav-link {
+    color: black;
+}
+
+.navbar .nav-link:hover {
+    color: gray;
+}
+

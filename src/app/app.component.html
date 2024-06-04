@@ -1,0 +1,195 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FDD90B;">
+    <a class="navbar-brand" routerLink="/accueil">
+      <img class="logo" src="assets/images/logopv.jpg" alt="Logo Au Petit Village" height="40">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/accueil">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/produit">Produit</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/a-propos">À propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-cart"></i> Panier</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-person"></i> Inscription</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div *ngIf="isRoute('/accueil')">
+    <h1>Bienvenue à Au Petit Village</h1>
+    <p>Astérix, une série de bandes dessinées française créée par René Goscinny (scénario) et Albert Uderzo (dessin), fait ses débuts en 1959 dans le magazine Pilote. L'histoire se déroule en 50 av. J.-C. et suit les aventures du petit guerrier gaulois Astérix et de son fidèle ami Obélix, habitant un village résistant encore et toujours à l'envahisseur romain grâce à une potion magique concoctée par le druide Panoramix, qui leur donne une force surhumaine. La série, célèbre pour son humour, ses jeux de mots et ses références historiques, est devenue un phénomène culturel, traduite en plus de 100 langues et dialectes, avec plus de 370 millions d'albums vendus à travers le monde.</p>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="assets/images/accueil1.png" alt="">
+        <p>La deuxième saison de la série animée arrive !</p>
+        <p>lundi 3 juin 2024</p>
+        <p>Idefix et les Irréductibles reviennent...</p>
+        <a href="#">Lire la suite ></a>
+      </div>
+      <div class="grid-item">
+        <img src="assets/images/accueil2.png" alt="">
+        <p>Le tout premier escape game Astérix, en réalité virtuelle !</p>
+        <p>lundi 3 juin 2024</p>
+        <p>Pour la première fois en réalité virtuelle...</p>
+        <a href="#">Lire la suite ></a>
+      </div>
+      <div class="grid-item">
+        <img src="assets/images/accueil3.png" alt="">
+        <p>L'été Gaulois débute en magasin !</p>
+        <p>lundi 3 juin 2024</p>
+        <p>Cet été, nous allons vous gâter...</p>
+        <a href="#">Lire la suite ></a>
+      </div>
+      <div class="grid-item">
+        <img src="assets/images/accueil4.png" alt="">
+        <p>Entrez dans l'arène avec Astérix dans vos centres commerciaux Klépierre !</p>
+        <p>mercredi 21 février 2024</p>
+        <p>Du 27 février au 2 mars...</p>
+        <a href="#">Lire la suite ></a>
+      </div>
+      <div class="grid-item">
+        <img src="assets/images/accueil5.png" alt="">
+        <p>Astérix Le Gaulois en édition spéciale et luxe disponibles dès aujourd'hui !</p>
+        <p>mercredi 17 janvier 2024</p>
+        <p>Pour bien commencer cette nouvelle année...</p>
+        <a href="#">Lire la suite ></a>
+      </div>
+      <div class="grid-item">
+        <img src="assets/images/accueil6.png" alt="">
+        <p>Collectionnez les mugs Astérix !</p>
+        <p>mercredi 17 janvier 2024</p>
+        <p>Avec la collection inédite des Mugs Astérix...</p>
+        <a href="#">Lire la suite ></a>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isRoute('/produit')">
+    <h1>Découvrez nos Nouveautés</h1>
+    <div class="search-container">
+      <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Rechercher un produit par nom..." class="form-control">
+    </div>
+    <div class="container mt-4">
+      <div class="row" id="productGrid">
+        <div class="col-md-4 mb-4 product-item" data-name="digigraphie la cérémonie d'ouverture">
+          <div class="card">
+            <img src="assets/images/prod1.webp" class="card-img-top" alt="Digigraphie La Cérémonie d'Ouverture">
+            <div class="card-body">
+              <h5 class="card-title">Digigraphie La Cérémonie d'Ouverture</h5>
+              <p class="card-text">Nouveau</p>
+              <p class="card-text">Hachette Collections</p>
+              <p class="card-text">70,00 €</p>
+              <a href="#" class="btn btn-primary">Ajouter au panier</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 product-item" data-name="figurine idéfix xxl">
+          <div class="card">
+            <img src="assets/images/prod2.webp" class="card-img-top" alt="Figurine Idéfix XXL">
+            <div class="card-body">
+              <h5 class="card-title">Figurine Idéfix XXL</h5>
+              <p class="card-text">Nouveau</p>
+              <p class="card-text">Plastoy</p>
+              <p class="card-text">49,90 €</p>
+              <a href="#" class="btn btn-primary">Ajouter au panier</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 product-item" data-name="figurine astérix xl">
+          <div class="card">
+            <img src="assets/images/prod3.jpg" class="card-img-top" alt="Figurine Astérix XL">
+            <div class="card-body">
+              <h5 class="card-title">Figurine Astérix XL</h5>
+              <p class="card-text">Nouveau</p>
+              <p class="card-text">Plastoy</p>
+              <p class="card-text">44,90 €</p>
+              <a href="#" class="btn btn-primary">Ajouter au panier</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isRoute('/a-propos')">
+    <div class="container mt-5">
+      <h1 class="text-center">Histoire de l’entreprise Astérix</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <p><strong>Fondation (2020)</strong> : Astérix est fondée en 2020 par deux ingénieurs passionnés de technologie et d'innovation, Jean Dupont et Marie Lefèvre, à Paris, France. L'idée de départ est de créer une entreprise qui propose des solutions technologiques avancées pour améliorer l'efficacité et la productivité des entreprises.</p>
+          <p><strong>Premières années (2020-2022)</strong> : Dans ses premières années, Astérix se concentre sur le développement de logiciels de gestion pour les PME. Grâce à une compréhension profonde des besoins du marché et à des solutions innovantes, l'entreprise connaît une croissance rapide. Elle lance ses premières suites de logiciels ERP et CRM, qui sont bien accueillies par le marché.</p>
+          <p><strong>Expansion et diversification (2022-2024)</strong> : Fort de son succès initial, Astérix commence à diversifier ses offres. En 2022, l’entreprise introduit Astérix AI, une plateforme d'intelligence artificielle destinée à aider les entreprises à exploiter leurs données pour prendre des décisions stratégiques. En 2023, Astérix lance Astérix Cloud, une solution de cloud computing sécurisée et flexible qui permet aux entreprises de gérer leurs opérations de manière plus efficace.</p>
+          <p><strong>Croissance internationale (2024-présent)</strong> : En 2024, Astérix commence à s'implanter sur le marché international. L'entreprise ouvre des bureaux à New York et à Tokyo, visant à servir une clientèle mondiale. La même année, Astérix acquiert une petite entreprise de cybersécurité pour renforcer son offre de services et assurer la sécurité des données de ses clients.</p>
+          <p><strong>Engagement envers la durabilité</strong> : Tout au long de son histoire, Astérix reste engagé dans la durabilité. En 2023, l'entreprise lance une initiative pour réduire son empreinte carbone, incluant des mesures pour optimiser la consommation d'énergie dans ses centres de données et encourager des pratiques de travail respectueuses de l'environnement.</p>
+          <p><strong>Aujourd'hui</strong> : Astérix est reconnue comme un acteur majeur dans le domaine de la technologie et de l'innovation, avec environ 500 employés et un chiffre d'affaires de 50 millions d'euros en 2023. L'entreprise continue de croître et d'innover, en gardant son engagement envers l'excellence, l'intégrité et la satisfaction de ses clients. Sa vision est de devenir un leader mondial en fournissant des solutions technologiques durables et innovantes, contribuant à un avenir plus efficace et connecté pour les entreprises de toutes tailles.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isRoute('/contact')">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 side-color">
+          <!-- Empty column with background color -->
+        </div>
+        <div class="col-md-8 contact-form-container" style="background-color: #F9D0A3;">
+          <h1 class="text-center">Contactez-nous</h1>
+          <form>
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" class="form-control" id="name" placeholder="Entrez votre nom">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Entrez votre email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Votre message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form>
+        </div>
+        <div class="col-md-2 side-color">
+          <!-- Empty column with background color -->
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>Le footer est identique sur toutes les pages.</p>
+  <ul>
+    <li><a routerLink="/accueil">Accueil</a></li>
+    <li><a routerLink="/produit">Produit</a></li>
+    <li><a routerLink="/a-propos">À propos</a></li>
+    <li><a routerLink="/contact">Contact</a></li>
+  </ul>
+  <p>Suivez-nous sur les réseaux sociaux :</p>
+  <ul>
+    <li><a href="https://www.facebook.com/asterixobelixofficiel" target="_blank">Facebook</a></li>
+    <li><a href="https://www.instagram.com/lartdasterix/" target="_blank">Instagram</a></li>
+  </ul>
+</footer>
+>
